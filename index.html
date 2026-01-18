@@ -71,6 +71,29 @@
             <p>&copy; 2026 Sooraj. Built with <i class="fas fa-heart"></i> and Antigravity.</p>
         </footer>
     </div>
+
+    <!-- Neural Background Canvas -->
+    <canvas id="neural-canvas"></canvas>
+
+    <!-- Hidden Terminal -->
+    <div id="terminal-overlay" class="hidden">
+        <div class="terminal-window">
+            <div class="terminal-header">
+                <span class="terminal-title">user@sooraj-website: ~</span>
+                <button id="close-terminal" class="terminal-close">&times;</button>
+            </div>
+            <div class="terminal-body">
+                <div id="terminal-output">
+                    <p>Welcome to Sooraj's Terminal v1.0.0</p>
+                    <p>Type 'help' for a list of commands.</p>
+                </div>
+                <div class="terminal-input-line">
+                    <span class="prompt">user@sooraj:~$</span>
+                    <input type="text" id="terminal-input" autocomplete="off" autofocus>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 
