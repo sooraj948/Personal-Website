@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         draw() {
-            ctx.fillStyle = 'rgba(88, 166, 255, 0.3)'; // Accent color with low opacity
+            ctx.fillStyle = 'rgba(63, 185, 80, 0.3)'; // Match new accent color
             ctx.beginPath();
             ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
             ctx.fill();
@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const distance = Math.sqrt(dx * dx + dy * dy);
 
                 if (distance < 100) {
-                    ctx.strokeStyle = `rgba(88, 166, 255, ${0.1 * (1 - distance / 100)})`;
+                    ctx.strokeStyle = `rgba(63, 185, 80, ${0.1 * (1 - distance / 100)})`; // Match new accent color
                     ctx.lineWidth = 1;
                     ctx.beginPath();
                     ctx.moveTo(p.x, p.y);
@@ -155,13 +155,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 } else {
                     const responseLine = document.createElement('p');
                     responseLine.textContent = commands[input];
-                    responseLine.style.color = '#d2a8ff'; // Purple accent
+                    responseLine.style.color = '#3fb950'; // Green accent
                     terminalOutput.appendChild(responseLine);
                 }
             } else if (input !== '') {
                 const errorLine = document.createElement('p');
                 errorLine.textContent = `Command not found: ${input}. Type 'help' for list.`;
-                errorLine.style.color = '#ff7b72'; // Red error
+                errorLine.style.color = '#f85149'; // Red error
                 terminalOutput.appendChild(errorLine);
             }
 
